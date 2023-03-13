@@ -9,14 +9,14 @@ import (
 
 func setupRabbitMQ() RabbitMQ {
 	config := RabbitMQConfig{
-		ctx:            context.Background(),
-		debug:          false,
-		durable:        false,
-		connection_url: "amqp://guest:guest@localhost:5672/",
-		queue_name:     "test_queue",
-		producer_tps:   100,
-		consumer_tps:   100,
-		config:         amqp.Config{},
+		Ctx:            context.Background(),
+		Debug:          false,
+		Durable:        false,
+		Connection_url: "amqp://guest:guest@localhost:5672/",
+		Queue_name:     "test_queue",
+		Producer_tps:   100,
+		Consumer_tps:   100,
+		Config:         amqp.Config{},
 	}
 	return NewRabbitMq(config)
 }

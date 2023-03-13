@@ -10,7 +10,7 @@ To use the RabbitMQGo package in your Go project, simply run the following comma
 
 ```
 import (
-    "github.com/AndreGKruger/rabbitmqgo"
+    "github.com/AndreGKruger/rabbitmq-go"
 )
 ```
 
@@ -21,14 +21,14 @@ Example:
 
 ```
 config := rabbitmqgo.RabbitMQConfig{
-    ctx:            context.Background(),
-    debug:          true,
-    durable:        true,
-    connection_url: "amqp://guest:guest@localhost:5672/",
-    queue_name:     "test",
-    producer_tps:   100,
-    consumer_tps:   100,
-    config:         amqp.Config{},
+    Ctx:            context.Background(),
+    Debug:          true,
+    Durable:        true,
+    Connection_url: "amqp://guest:guest@localhost:5672/",
+    Queue_name:     "test",
+    Producer_tps:   100,
+    Consumer_tps:   100,
+    Config:         amqp.Config{},
 }
 
 rabbitmqInstance := rabbitmqgo.NewRabbitMq(config)

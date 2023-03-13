@@ -32,27 +32,27 @@ type rabbitmq struct {
 }
 
 type RabbitMQConfig struct {
-	ctx            context.Context
-	debug          bool
-	durable        bool
-	connection_url string
-	queue_name     string
-	producer_tps   int
-	consumer_tps   int
-	config         amqp.Config
+	Ctx            context.Context
+	Debug          bool
+	Durable        bool
+	Connection_url string
+	Queue_name     string
+	Producer_tps   int
+	Consumer_tps   int
+	Config         amqp.Config
 }
 
 func NewRabbitMq(cnf RabbitMQConfig) RabbitMQ {
 	return &rabbitmq{
-		ctx:            cnf.ctx,
+		ctx:            cnf.Ctx,
 		logger:         log.Default(),
-		debug:          cnf.debug,
-		durable:        cnf.durable,
-		connection_url: cnf.connection_url,
-		config:         cnf.config,
-		queue_name:     cnf.queue_name,
-		producer_tps:   ratelimit.New(cnf.producer_tps),
-		consumer_tps:   ratelimit.New(cnf.consumer_tps),
+		debug:          cnf.Debug,
+		durable:        cnf.Durable,
+		connection_url: cnf.Connection_url,
+		config:         cnf.Config,
+		queue_name:     cnf.Queue_name,
+		producer_tps:   ratelimit.New(cnf.Producer_tps),
+		consumer_tps:   ratelimit.New(cnf.Consumer_tps),
 	}
 }
 
