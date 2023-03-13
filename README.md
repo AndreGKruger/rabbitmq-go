@@ -10,7 +10,7 @@ To use the RabbitMQGo package in your Go project, simply run the following comma
 
 ```
 import (
-    "github.com/user/rabbitmqgo"
+    "github.com/AndreGKruger/rabbitmqgo"
 )
 ```
 
